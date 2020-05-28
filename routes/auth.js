@@ -33,8 +33,8 @@ router.get('/signout', signout);
 
 module.exports = router;
 
-if (!user.authenticate(password)) {
-    return res.status(401).json({
-        error: 'email and password donot match'
-    });
-}
+// if (!user.authenticate(password)) {
+//     return res.status(401).json({
+//         error: 'email and password donot match'
+//     });
+// }

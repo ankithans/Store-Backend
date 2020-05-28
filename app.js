@@ -6,7 +6,10 @@ const app = express();
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var cors = require('cors');
+
+// my routes
 const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/user');
 
 // DB connection
 mongoose.connect(process.env.DATABASE, {
@@ -26,6 +29,7 @@ app.use(cors());
 
 // My routes
 app.use('/api', authRoutes);
+app.use('/api', userRoutes);
 
 // port number comming from .env
 const port = process.env.PORT || 8000;

@@ -14,7 +14,6 @@ exports.getUserById = (req, res, next, id) => {
 }
 
 exports.getUser = (req, res) => {
-    // TODO: get back here for password 
     req.profile.salt = undefined;
     req.profile.encry_password = undefined;
     req.profile.createdAt = undefined;
@@ -84,8 +83,6 @@ exports.pushOrderInPurchaseList = (res, req, next) => {
             }
             next();
         }
-
-
     );
 
 
